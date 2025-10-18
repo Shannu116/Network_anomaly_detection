@@ -1,0 +1,20 @@
+{
+  "accuracy": 0.8731234513919254,
+  "precision": 0.8214469998525726,
+  "recall": 0.9833009794405718,
+  "f1_score": 0.895116269729708,
+  "roc_auc": 0.9836598757276644,
+  "average_precision": 0.9880784173735433,
+  "confusion_matrix": {
+    "true_negative": 27311,
+    "false_positive": 9689,
+    "false_negative": 757,
+    "true_positive": 44575
+  },
+  "specificity": 0.7381351351351352,
+  "false_positive_rate": 0.2618648648648649,
+  "false_negative_rate": 0.016699020559428217,
+  "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.97      0.74      0.84     37000\n      Attack       0.82      0.98      0.90     45332\n\n    accuracy                           0.87     82332\n   macro avg       0.90      0.86      0.87     82332\nweighted avg       0.89      0.87      0.87     82332\n",
+  "timestamp": "2025-10-18T16:16:00.315928",
+  "test_dataset": "UNSW_NB15_testing-set.csv"
+}
