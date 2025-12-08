@@ -1,0 +1,358 @@
+# Network Anomaly Detection System - .gitignore# Network Anomaly Detection System - .gitignore
+
+# ================================================# ================================================
+
+# This project INCLUDES datasets and trained models in the repository
+
+# but EXCLUDES log files generated during runtime# === IMPORTANT: Keep datasets and trained models ===
+
+# Datasets (.csv files) are INCLUDED in the repository
+
+# =============================================================================# Trained models (.joblib, .h5) are INCLUDED in the repository
+
+# LOG FILES (EXCLUDED - Generated at Runtime)
+
+# =============================================================================# Logs (EXCLUDED - generated at runtime)
+
+logs/logs/
+
+log/*.log
+
+*.logcapture_logs/
+
+capture_logs/anomaly_logs/
+
+anomaly_logs/session_logs/
+
+session_logs/
+
+detection_logs/# Large packet capture files (EXCLUDED)
+
+*_log_*.csv*.pcap
+
+*_log_*.json*.pcapng
+
+session_*.json*.cap
+
+anomaly_*.json*.dump
+
+anomaly_*.csvnetwork_capture_*
+
+
+
+# =============================================================================# Training checkpoints and temporary files
+
+# PYTHONcheckpoints/
+
+# =============================================================================temp/
+
+__pycache__/tmp/
+
+*.py[cod]cache/
+
+*$py.class.cache/
+
+*.so# Allow keeping model performance plots
+
+.Python# training_*.png
+
+build/# confusion_matrix.png
+
+develop-eggs/# roc_curve.png
+
+dist/# training_history.png
+
+downloads/
+
+eggs/# Python specific
+
+.eggs/__pycache__/
+
+lib/*.py[cod]
+
+lib64/*$py.class
+
+parts/*.so
+
+sdist/.Python
+
+var/build/
+
+wheels/develop-eggs/
+
+share/python-wheels/dist/
+
+*.egg-info/downloads/
+
+.installed.cfgeggs/
+
+*.egg.eggs/
+
+MANIFESTlib/
+
+pip-log.txtlib64/
+
+pip-delete-this-directory.txtparts/
+
+sdist/
+
+# =============================================================================var/
+
+# VIRTUAL ENVIRONMENTS (EXCLUDED)wheels/
+
+# =============================================================================share/python-wheels/
+
+venv/*.egg-info/
+
+env/.installed.cfg
+
+ENV/*.egg
+
+env.bak/MANIFEST
+
+venv.bak/
+
+.venv/# Virtual environments
+
+.virtualenv/venv/
+
+env/
+
+# =============================================================================ENV/
+
+# IDE AND EDITOR FILESenv.bak/
+
+# =============================================================================venv.bak/
+
+.vscode/.venv/
+
+.idea/
+
+*.swp# IDE and editor files
+
+*.swo.vscode/
+
+*~.idea/
+
+.project*.swp
+
+.pydevproject*.swo
+
+.settings/*~
+
+*.sublime-project.DS_Store
+
+*.sublime-workspaceThumbs.db
+
+
+
+# =============================================================================# Jupyter Notebook
+
+# OPERATING SYSTEM FILES.ipynb_checkpoints
+
+# =============================================================================
+
+.DS_Store# PyTorch
+
+.DS_Store?*.pth
+
+._**.pt
+
+.Spotlight-V100
+
+.Trashes# TensorFlow
+
+ehthumbs.db*.pb
+
+Thumbs.db*.tflite
+
+Desktop.inisaved_model/
+
+$RECYCLE.BIN/
+
+# Data processing temporary files
+
+# =============================================================================temp/
+
+# JUPYTER NOTEBOOKtmp/
+
+# =============================================================================cache/
+
+.ipynb_checkpoints.cache/
+
+*.ipynb_checkpoints/
+
+# OS specific
+
+# =============================================================================.DS_Store
+
+# PACKET CAPTURE FILES (EXCLUDED - Can be very large).DS_Store?
+
+# =============================================================================._*
+
+*.pcap.Spotlight-V100
+
+*.pcapng.Trashes
+
+*.capehthumbs.db
+
+*.dumpThumbs.db
+
+network_capture_*Desktop.ini
+
+packet_capture_*
+
+# Network capture files
+
+# =============================================================================*.cap
+
+# TEMPORARY FILES AND CACHE*.dump
+
+# =============================================================================network_capture_*
+
+temp/
+
+tmp/# Performance profiling
+
+cache/*.prof
+
+.cache/*.profile
+
+*.tmp
+
+*.temp# Configuration files with sensitive data (if any)
+
+*.bakconfig.ini
+
+*.swpcredentials.json
+
+*~.nibsecrets.txt
+
+
+
+# =============================================================================# Compressed archives (optional)
+
+# PERFORMANCE PROFILING*.zip
+
+# =============================================================================*.tar.gz
+
+*.prof*.7z
+
+*.profile
+
+.profiling/# Test results (regenerated)
+
+test_results/*.png
+
+# =============================================================================test_results/*.pdf
+
+# SENSITIVE CONFIGURATION (If any)
+
+# =============================================================================# Temporary training status files
+
+config.initraining_status_*.txt
+
+credentials.json*.status
+
+secrets.txt
+
+.env# === KEEP THESE FILES ===
+
+.env.local# Documentation
+
+!README.md
+
+# =============================================================================!LIVE_DETECTION_GUIDE.md
+
+# COMPRESSED ARCHIVES!requirements.txt
+
+# =============================================================================!.gitignore
+
+*.zip!LICENSE
+
+*.tar.gz
+
+*.tar.bz2# Dataset files (INCLUDED)
+
+*.7z!*.csv
+
+*.rar
+
+# Trained models (INCLUDED)
+
+# =============================================================================!trained_models/
+
+# TEST ARTIFACTS (Can be regenerated)!trained_models/*.joblib
+
+# =============================================================================!trained_models/*.json
+
+.pytest_cache/!models/
+
+.tox/!models/*.h5
+
+.coverage!models/*.joblib
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+
+# =============================================================================
+# TRAINING ARTIFACTS (Optional - Can be regenerated)
+# =============================================================================
+checkpoints/
+training_status_*.txt
+*.status
+
+# =============================================================================
+# DOCUMENTATION BUILD (If using Sphinx or similar)
+# =============================================================================
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# =============================================================================
+# KEEP THESE FILES (Explicitly Include)
+# =============================================================================
+# These override any patterns above
+
+# Documentation
+!README.md
+!LIVE_DETECTION_GUIDE.md
+!*.md
+
+# Requirements and Configuration
+!requirements.txt
+!setup.py
+!setup.cfg
+!pyproject.toml
+
+# Git configuration
+!.gitignore
+!.gitattributes
+
+# License
+!LICENSE
+
+# Datasets (INCLUDED - CSV files)
+!*.csv
+!data/*.csv
+!datasets/*.csv
+
+# Trained Models (INCLUDED)
+!trained_models/
+!trained_models/*.joblib
+!trained_models/*.h5
+!trained_models/*.pkl
+!trained_models/*.json
+!models/
+!models/*.joblib
+!models/*.h5
+!models/*.pkl
+!models/*.json
+
+# Test Results (INCLUDED)
+!test_results/
+!test_results/*.json
+
+# Python Scripts (INCLUDED)
+!*.py
